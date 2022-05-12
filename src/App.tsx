@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC } from 'react';
+import 'antd/dist/antd.css';
+import { Layout } from 'antd';
 import './App.css';
+import { useTypedSelector } from './hooks/useTypedSelector';
+import MySwitch from './components/UI/mySwitch/mySwitch';
+import Draggable from './components/Draggable';
+import Droppable from './components/Droppable';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const { Sider, Content } = Layout;
+
+const App: FC = () => {
+    const { isActive } = useTypedSelector(state => state.calc);
+
+    return (
+        <Layout>
+            <Sider collapsible collapsed={isActive} trigger={null} width={'50vw'} collapsedWidth={0}>
+                <Draggable />
+            </Sider>
+            <Content>
+                <div className='content-wrapper'>
+                    <MySwitch />
+                    <Droppable />
+                </div>
+            </Content>
+        </Layout>
+    );
+};
 
 export default App;
