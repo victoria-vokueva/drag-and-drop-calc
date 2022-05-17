@@ -130,15 +130,30 @@ body {
     z-index: +13;
 }
 
-.ant-input {
+.display {
     font-weight: 800;
     font-size: 36px;
-    text-align: right;
     background: #F3F4F6;
     border-radius: 6px;
     border: 0;
+    padding: 0 8px 0 10px;
     width: 232px;
     height: 52px;
+    flex: 1;
+}
+
+.auto-scaling-wrapper {
+    position: relative;
+}
+
+.auto-scaling-text {
+    display: inline-block;
+}
+
+.display .auto-scaling-text {
+    position: absolute;
+    right: 0;
+    transform-origin: right;
 }
 
 .ant-input::placeholder {

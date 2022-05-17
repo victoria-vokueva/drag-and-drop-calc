@@ -9,26 +9,12 @@ interface ICalculatorOperations {
     [index: string]: (any);
 }
 
-const formatting = (value: string) => {
-    const language = navigator.language || 'en-US';
-    let formattedValue = parseFloat(value).toLocaleString(language, {
-        useGrouping: true,
-        maximumSignificantDigits: 7,
-        maximumFractionDigits: 1,
-    } || {
-        useGrouping: true,
-        maximumSignificantDigits: 1,
-        maximumFractionDigits: 7,
-    });
-    return formattedValue;
-}
-
 const CalculatorOperations = {
-    '/': (prevValue: number, nextValue: number) => formatting(String(prevValue / nextValue)),
-    '*': (prevValue: number, nextValue: number) => formatting(String(prevValue * nextValue)),
-    '+': (prevValue: number, nextValue: number) => formatting(String(prevValue + nextValue)),
-    '-': (prevValue: number, nextValue: number) => formatting(String(prevValue - nextValue)),
-    '=': (nextValue: number) => formatting(String(nextValue)),
+    '/': (prevValue: number, nextValue: number) => (prevValue / nextValue),
+    '*': (prevValue: number, nextValue: number) => (prevValue * nextValue),
+    '+': (prevValue: number, nextValue: number) => (prevValue + nextValue),
+    '-': (prevValue: number, nextValue: number) => (prevValue - nextValue),
+    '=': (nextValue: number) => (nextValue),
 } as ICalculatorOperations;
 
 interface ComponentProps {
@@ -71,14 +57,6 @@ const CalcComponent: FC<ComponentProps> = ({ component }) => {
             setWaiting(true);
             return;
         }
-
-        /*if (value === '=') {
-            const newValue = CalculatorOperations['='](Number(displayValue));
-            setValue(String(newValue));
-            setWaiting(false);
-            setOperator('');
-            setData(String('0'));
-        }*/
     }
 
     return (
