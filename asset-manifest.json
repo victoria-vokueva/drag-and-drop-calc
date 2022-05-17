@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/drag-and-drop-calc%20/static/css/main.307a9c5b.css",
-    "main.js": "/drag-and-drop-calc%20/static/js/main.fe782294.js",
-    "static/media/icons.svg": "/drag-and-drop-calc%20/static/media/icons.2864546889d82f7d58bc47a9799f0522.svg",
-    "index.html": "/drag-and-drop-calc%20/index.html",
-    "main.307a9c5b.css.map": "/drag-and-drop-calc%20/static/css/main.307a9c5b.css.map",
-    "main.fe782294.js.map": "/drag-and-drop-calc%20/static/js/main.fe782294.js.map"
+    "main.css": "/drag-and-drop-calc/static/css/main.b0a42445.css",
+    "main.js": "/drag-and-drop-calc/static/js/main.7d329b42.js",
+    "static/media/icons.svg": "/drag-and-drop-calc/static/media/icons.2864546889d82f7d58bc47a9799f0522.svg",
+    "index.html": "/drag-and-drop-calc/index.html",
+    "main.b0a42445.css.map": "/drag-and-drop-calc/static/css/main.b0a42445.css.map",
+    "main.7d329b42.js.map": "/drag-and-drop-calc/static/js/main.7d329b42.js.map"
   },
   "entrypoints": [
-    "static/css/main.307a9c5b.css",
-    "static/js/main.fe782294.js"
+    "static/css/main.b0a42445.css",
+    "static/js/main.7d329b42.js"
   ]
 }
